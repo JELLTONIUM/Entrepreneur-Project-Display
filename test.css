@@ -1,7 +1,6 @@
 html {
     font-family: sans-serif;
     overflow-x: hidden;
-    scrol
 }
 
 
@@ -72,7 +71,7 @@ html {
     width: 100%;
     top: 80%;
     background-color: #581a77;
-    height: 5000px;
+    height: 1000px;
     border-top: 3px solid #ba4fef;
 }
 
@@ -83,11 +82,13 @@ html {
     padding: 20px;
     border: 5px solid #FFF;
     color: #FFF;
+    border-radius: 5px;
 }
 
 .footer {
-    position: relative;
-    top: 100%;
+    position: absolute;
+    top: 200%;
+    height: 100px;
     width: 100%;
     text-align: center;
     color: #FFF;
