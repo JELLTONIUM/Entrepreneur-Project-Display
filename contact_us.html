@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="test.css" type="text/css" rel="stylesheet">
+        <script>
+            function delay (URL) {
+                setTimeout( function() { window.location = URL }, 1500 );
+            }
+            function animation(){
+            document.getElementById('screen').id ='screen2';
+            document.getElementById('top').id ='top2';
+            document.getElementById('left').id ='left2';
+            document.getElementById('right').id ='right2';
+            document.getElementById('bottom').id ='bottom2';
+            document.getElementById('loadtext').id ='load_text2';
+            }
+        </script>
+    </head>
+    <body>
+        <div class="screen screen1" id="screen">
+            <div class="top top1" id="top"></div>
+            <div class="left left1" id="left"></div>
+            <div class="right right1" id="right"></div>
+            <div class="bottom bottom1" id="bottom"></div>
+            <p id="loadtext" class="load_text">loading...</p>
+        </div>
+        <div class="navigation">
+            <a href="javascript:delay('home.html')" onclick="animation()" class="link1 nav-button">Home</a>
+            <a href="javascript:delay('blank.html')" onclick="animation()" class="link2 nav-button">Blank</a>
+            <a href="javascript:delay('documentation.html')" onclick="animation()" class="link3 nav-button">Documentation</a>
+            <a href="javascript:delay('contact_us.html')" onclick="animation()" class="link4 nav-button active">Contact Us</a>
+        </div>
+        <img class="home_img" src="Images/background.jpg" alt="background_pink_to_blue">
+        
+        
+    </body>
+</html>
