@@ -1,9 +1,13 @@
+/*selects the whole document*/
 html {
-    font-family: sans-serif;
+    font-family: 'Barlow', sans-serif;
     overflow-x: hidden;
 }
 
 
+/*navigation bar styling*/
+
+/*background*/
 .navigation {
     z-index: 1;
     position: absolute;
@@ -17,8 +21,12 @@ html {
     top: 0px;
     border-bottom: 3px solid #ba4fef;
     padding: 3px;
-    opacity: 0.9;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
 }
+
+/*actual buttons*/
 .nav-button.active {
     background-color: #ba4fef;
     color: #FFF;
@@ -26,11 +34,12 @@ html {
 .nav-button {
     position: relative;
     text-decoration: none;
-    border-radius: 2px;
-    padding: 6px;
+    border-radius: 4px;
+    padding: 1px;
     white-space: nowrap;
     color: #FFF;
-    font-weight: bold;
+    width: 24.7%;
+    vertical-align: middle;
     
     transition-property: all;
     transition-duration: 0.3s;
@@ -40,6 +49,7 @@ html {
 }
 
 
+/*background img styling*/
 .home_img {
     position: fixed;
     top: 0px;
@@ -52,11 +62,13 @@ html {
     filter: brightness(110%);
 }
 
+
+/*main heading*/
 .title {
     z-index: -1;
     position: relative;
     text-align: center;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
@@ -65,16 +77,46 @@ html {
     border-bottom: 2px solid #FFF;
     width: 400px;
 }
+
+
+/*Arrow styling and animation*/
+.arrow {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    left: 50%;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    transform-origin: top left;
+    transform: rotate(45deg);
+    animation-name: arrowdown;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes arrowdown {
+    0% {transform: rotate(45deg) translate(-10px,-10px);}
+    50% {transform: rotate(45deg) translate(10px,10px);}
+    100% {transform: rotate(45deg) translate(-10px,-10px);}
+}
+
+
+/*main content styling*/
+
+/*background styling*/
 .content-bg {
     position: relative;
     z-index: -1;
     width: 100%;
-    top: 80%;
+    top: 70%;
     background-color: #581a77;
-    height: 1000px;
+    min-height: 1500px;
     border-top: 3px solid #ba4fef;
 }
 
+/*MAIN CONTENT*/
 .internal {
     position: relative;
     margin: 100px;
@@ -84,24 +126,96 @@ html {
     color: #FFF;
     border-radius: 5px;
 }
+.main_text {
+    padding: 10px;
+    margin: 10px;
+    color: #FFF;
+}
 
+
+/*footer styling*/
 .footer {
     position: absolute;
-    top: 200%;
+    bottom: 0px;
     height: 100px;
     width: 100%;
     text-align: center;
     color: #FFF;
+    border-top: 3px solid #ba4fef;
+    display: flex;
+    justify-content: space-around;
 }
 
+
+.footer_button {
+    height: 50px;
+    width: 50px;
+    margin: 24px;
+}
+
+
+/*removes scrollbar*/
 .screen::-webkit-scrollbar {
  display: none;
 }
 
+
+/*contact us card styling*/
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px 20px 0px 20px;
+    padding: 0px 200px 0px 200px;
+}
+.card {
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    background-color: #ba4fef;
+    margin: 20px;
+    height: 200px;
+    width: 600px;
+    border-radius: 10px;
+}
+.card-bar {
+    height: 194px;
+    width: 10%;
+    border-radius: 8px 0px 0px 8px;
+    margin: 3px;
+}
+.card-content {
+    height: 194px;
+    width: calc(90% + 3px);
+    border-radius: 0px 8px 8px 0px;
+    background-color: #581a77;
+    margin: 3px 3px 3px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-bar-text {
+    text-align: center;
+    position: relative;
+    transform-origin: center center;
+    transform: rotate(-90deg);
+    top: 36%;
+    left: 0%;
+    line-height: 1;
+    color: #FFF;
+}
+.card-content-text {
+    margin: 15px;
+    color: #FFF;
+}
+
+
 /*page transition*/
+
+/*sets bounderies within entire page*/
 .screen {
     overflow: auto;
-    
     position: fixed;
     top: 0px;
     left: 0px;
@@ -128,7 +242,7 @@ html {
     100% {z-index: 2;}
 }
 
-
+/*top square animation*/
 .top {
     position: fixed;
     top: 50%;
@@ -161,7 +275,7 @@ html {
     100% {top: 50%; left: 50%; transform: rotate(-135deg);}
 }
 
-
+/*left square animation*/
 .left {
     position: fixed;
     top: 50%;
@@ -194,7 +308,7 @@ html {
     100% {top: 50%; left: 50%; transform: rotate(135deg);}
 }
 
-
+/*right square animation*/
 .right {
     position: fixed;
     top: 50%;
@@ -228,7 +342,7 @@ html {
     100% {top: 50%; left: 50%; transform: rotate(-45deg);}
 }
 
-
+/*bottom square animation*/
 .bottom {
     position: fixed;
     top: 50%;
@@ -261,7 +375,7 @@ html {
     100% {top: 50%; left: 50%; transform: rotate(45deg);}
 }
 
-
+/*loading text animation*/
 .load_text {
     position: relative;
     top: 80%;
@@ -293,7 +407,7 @@ html {
 }
 
 
-/*Link animation come in from right*/
+/*Link animation come in from right on start up*/
 .link1 {
   visibility: hidden;
   position: relative;
@@ -303,7 +417,6 @@ html {
   animation-timing-function: ease-in-out;
   animation-delay: 1s;
 }
-
 @keyframes link1 {
   0% {left: -1000px;}
   100% {left: 0px;visibility: visible;}
@@ -318,7 +431,6 @@ html {
   animation-timing-function: ease-in-out;
   animation-delay: 0.75s;
 }
-
 @keyframes link2 {
   0% {left: -1000px;}
   100% {left: 0px;visibility: visible;}
@@ -333,7 +445,6 @@ html {
   animation-timing-function: ease-in-out;
   animation-delay: 0.5s;
 }
-
 @keyframes link3 {
   0% {left: -1000px;}
   100% {left: 0px;visibility: visible;}
@@ -348,8 +459,22 @@ html {
   animation-timing-function: ease-in-out;
   animation-delay: 0.25s;
 }
-
 @keyframes link4 {
   0% {left: -1000px;}
   100% {left: 0px;visibility: visible;}
+}
+
+
+/*Contact us card animation*/
+.card {
+    border: 0px solid #4597ef;
+    position: relative;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.card:hover {
+    background-color: #4597ef;
+    border: 20px solid#581a77;
+    border-radius: 30px;
+    margin: 0px;
 }
