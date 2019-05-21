@@ -56,9 +56,8 @@ html {
     left: 50%;
     transform: translate( -50%, 0px);
     z-index: -1;
-    min-width: 90%;
-    width: 1600px;
-    height: 1600px;
+    width: 100%;
+    height: 100%;
     filter: brightness(110%);
 }
 
@@ -113,16 +112,17 @@ html {
     top: 70%;
     background-color: #581a77;
     min-height: 1500px;
+    overflow: auto;
     border-top: 3px solid #ba4fef;
+    justify-content: center;
 }
 
 /*MAIN CONTENT*/
 .internal {
     position: relative;
-    margin: 100px;
-    text-align: center;
+    margin: 50px 50px 300px 50px;
     padding: 20px;
-    border: 5px solid #FFF;
+    text-align: center;
     color: #FFF;
     border-radius: 5px;
 }
@@ -130,6 +130,13 @@ html {
     padding: 10px;
     margin: 10px;
     color: #FFF;
+    font-size: 25px;
+}
+
+
+/*shelf image styling*/
+.shelf_img {
+    height: 500px;
 }
 
 
@@ -137,20 +144,40 @@ html {
 .footer {
     position: absolute;
     bottom: 0px;
-    height: 100px;
+    height: 120px;
     width: 100%;
     text-align: center;
-    color: #FFF;
     border-top: 3px solid #ba4fef;
+    color: #FFF;
     display: flex;
     justify-content: space-around;
 }
-
-
+.footer_button_border {
+    height: 75px;
+    width: 75px;
+    margin: 15px;
+    justify-content: center;
+    border: 3px solid #ba4fef;
+    border-radius: 50%;
+}
+.footer_button_1 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
 .footer_button {
-    height: 50px;
-    width: 50px;
-    margin: 24px;
+    height:50%;
+    width:80%;
+    position:relative;
+    top:18px;
+}
+.footer_button_1:hover {
+    background-color: rgb(210,210,255);
+    transform: translate(0px,-15px);
+    box-shadow: 0 10px 20px  -5px grey;
 }
 
 
@@ -164,10 +191,11 @@ html {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     margin: 0px 20px 0px 20px;
-    padding: 0px 200px 0px 200px;
+    padding: 0px 100px 0px 100px;
 }
 .card {
     text-decoration: none;
@@ -247,8 +275,8 @@ html {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 1000px;
-    height: 1000px;
+    width: 10000px;
+    height: 10000px;
     transform: rotate(-135deg);
     transform-origin: top left;
     background-color: lightblue;
@@ -280,8 +308,8 @@ html {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 1000px;
-    height: 1000px;
+    width: 10000px;
+    height: 10000px;
     transform: rotate(135deg);
     transform-origin: top left;
     background-color: lightgreen;
@@ -313,8 +341,8 @@ html {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 1000px;
-    height: 1000px;
+    width: 10000px;
+    height: 10000px;
     transform: rotate(-45deg);
     transform-origin: top left;
     background-color: #ffffaa;
@@ -347,8 +375,8 @@ html {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 1000px;
-    height: 1000px;
+    width: 10000px;
+    height: 10000px;
     transform: rotate(45deg);
     transform-origin: top left;
     background-color: pink;
@@ -418,7 +446,7 @@ html {
   animation-delay: 1s;
 }
 @keyframes link1 {
-  0% {left: -1000px;}
+  0% {left: -100%}
   100% {left: 0px;visibility: visible;}
 }
 
@@ -432,7 +460,7 @@ html {
   animation-delay: 0.75s;
 }
 @keyframes link2 {
-  0% {left: -1000px;}
+  0% {left: -100%;}
   100% {left: 0px;visibility: visible;}
 }
 
@@ -446,7 +474,7 @@ html {
   animation-delay: 0.5s;
 }
 @keyframes link3 {
-  0% {left: -1000px;}
+  0% {left: -100%;}
   100% {left: 0px;visibility: visible;}
 }
 
@@ -460,7 +488,7 @@ html {
   animation-delay: 0.25s;
 }
 @keyframes link4 {
-  0% {left: -1000px;}
+  0% {left: -100%;}
   100% {left: 0px;visibility: visible;}
 }
 
